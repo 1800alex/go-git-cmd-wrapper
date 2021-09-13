@@ -3,11 +3,7 @@ package add
 // CODE GENERATED AUTOMATICALLY
 // THIS FILE MUST NOT BE EDITED BY HAND
 
-import (
-	"fmt"
-
-	"github.com/1800alex/go-git-cmd-wrapper/v2/types"
-)
+import "github.com/1800alex/go-git-cmd-wrapper/v2/types"
 
 // All Update the index not only where the working tree has a file matching <pathspec> but also where the index already has an entry.
 // This adds, modifies, and removes index entries to match the working tree.
@@ -107,12 +103,4 @@ func Update(g *types.Cmd) {
 // -v, --verbose
 func Verbose(g *types.Cmd) {
 	g.AddOptions("--verbose")
-}
-
-// WorkingDir Sets the working dir use for the git command.
-// --working-dir=<dir>
-func WorkingDir(dir string) func(*types.Cmd) {
-	return func(g *types.Cmd) {
-		g.AddOptions(fmt.Sprintf("--working-dir=%s", dir))
-	}
 }

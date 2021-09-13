@@ -4,11 +4,6 @@
     "enabled": true,
     "options": [
       {
-        "argument": "--working-dir=<dir>",
-        "arguments": "--working-dir=<dir>",
-        "description": "Sets the working dir use for the git command."
-      },
-      {
         "argument": "--quiet",
         "arguments": "-q, --quiet",
         "description": "This is passed to both underlying git-fetch to squelch reporting of during transfer, and underlying git-merge to squelch output during merging."
@@ -225,11 +220,6 @@
     "enabled": true,
     "options": [
       {
-        "argument": "--working-dir=<dir>",
-        "arguments": "--working-dir=<dir>",
-        "description": "Sets the working dir use for the git command."
-      },
-      {
         "argument": "--all",
         "arguments": "--all",
         "description": "Fetch all remotes."
@@ -376,11 +366,6 @@
     "enabled": true,
     "options": [
       {
-        "argument": "--working-dir=<dir>",
-        "arguments": "--working-dir=<dir>",
-        "description": "Sets the working dir use for the git command."
-      },
-      {
         "argument": "--quiet",
         "arguments": "-q, --quiet",
         "description": "Only print error and warning messages; all other output will be suppressed."
@@ -411,11 +396,6 @@
     "command_name": "rebase",
     "enabled": true,
     "options": [
-      {
-        "argument": "--working-dir=<dir>",
-        "arguments": "--working-dir=<dir>",
-        "description": "Sets the working dir use for the git command."
-      },
       {
         "argument": "--onto <newbase>",
         "arguments": "--onto <newbase>",
@@ -599,11 +579,6 @@
     "enabled": true,
     "options": [
       {
-        "argument": "--working-dir=<dir>",
-        "arguments": "--working-dir=<dir>",
-        "description": "Sets the working dir use for the git command."
-      },
-      {
         "argument": "--all",
         "arguments": "--all",
         "description": "Push all branches (i.e. refs under refs/heads/); cannot be used with other <refspec>."
@@ -760,11 +735,6 @@
     "enabled": true,
     "options": [
       {
-        "argument": "--working-dir=<dir>",
-        "arguments": "--working-dir=<dir>",
-        "description": "Sets the working dir use for the git command."
-      },
-      {
         "argument": "--local",
         "arguments": "--local, -l",
         "description": "When the repository to clone from is on a local machine, this flag bypasses the normal 'Git aware' transport mechanism and clones the repository by making a copy of HEAD and everything under objects and refs directories. The files under .git/objects/ directory are hardlinked to save space when possible."
@@ -891,11 +861,6 @@
     "enabled": true,
     "options": [
       {
-        "argument": "--working-dir=<dir>",
-        "arguments": "--working-dir=<dir>",
-        "description": "Sets the working dir use for the git command."
-      },
-      {
         "argument": "--quiet",
         "arguments": "-q, --quiet",
         "description": "Quiet, suppress feedback messages."
@@ -1005,11 +970,6 @@
     "enabled": true,
     "options": [
       {
-        "argument": "--working-dir=<dir>",
-        "arguments": "--working-dir=<dir>",
-        "description": "Sets the working dir use for the git command."
-      },
-      {
         "argument": "--global",
         "arguments": "--global",
         "description": "For writing options: write to global ~/.gitconfig file rather than the repository .git/config, write to $XDG_CONFIG_HOME/git/config file if this file exists and the ~/.gitconfig file doesn’t."
@@ -1086,11 +1046,6 @@
     "enabled": true,
     "options": [
       {
-        "argument": "--working-dir=<dir>",
-        "arguments": "--working-dir=<dir>",
-        "description": "Sets the working dir use for the git command."
-      },
-      {
         "argument": "--soft",
         "arguments": "--soft",
         "description": "Does not touch the index file or the working tree at all (but resets the head to <commit>, just like all modes do).\nThis leaves all your changed files 'Changes to be committed', as git status would put it."
@@ -1126,11 +1081,6 @@
     "command_name": "commit",
     "enabled": true,
     "options": [
-      {
-        "argument": "--working-dir=<dir>",
-        "arguments": "--working-dir=<dir>",
-        "description": "Sets the working dir use for the git command."
-      },
       {
         "argument": "--all",
         "arguments": "-a, --all",
@@ -1313,11 +1263,6 @@
     "enabled": true,
     "options": [
       {
-        "argument": "--working-dir=<dir>",
-        "arguments": "--working-dir=<dir>",
-        "description": "Sets the working dir use for the git command."
-      },
-      {
         "argument": "--dry-run",
         "arguments": "-n, --dry-run",
         "description": "Don't actually add the file(s), just show if they exist and/or will be ignored."
@@ -1388,11 +1333,6 @@
     "command_name": "merge",
     "enabled": true,
     "options": [
-      {
-        "argument": "--working-dir=<dir>",
-        "arguments": "--working-dir=<dir>",
-        "description": "Sets the working dir use for the git command."
-      },
       {
         "argument": "--commit",
         "arguments": "--commit, --no-commit",
@@ -1549,11 +1489,6 @@
     "command_name": "revparse",
     "enabled": true,
     "options": [
-      {
-        "argument": "--working-dir=<dir>",
-        "arguments": "--working-dir=<dir>",
-        "description": "Sets the working dir use for the git command."
-      },
       {
         "argument": "--parseopt",
         "arguments": "--parseopt",
@@ -1781,11 +1716,6 @@
     "enabled": true,
     "options": [
       {
-        "argument": "--working-dir=<dir>",
-        "arguments": "--working-dir=<dir>",
-        "description": "Sets the working dir use for the git command."
-      },
-      {
         "argument": "--annotate",
         "arguments": "-a, --annotate",
         "description": "Make an unsigned, annotated tag object."
@@ -1902,11 +1832,6 @@
     "enabled": true,
     "options": [
       {
-        "argument": "--working-dir=<dir>",
-        "arguments": "--working-dir=<dir>",
-        "description": "Sets the working dir use for the git command."
-      },
-      {
         "argument": "--short",
         "arguments": "-s, --short",
         "description": "Give the output in the short-format."
@@ -1997,11 +1922,6 @@
     "command_name": "notes",
     "enabled": true,
     "options": [
-      {
-        "argument": "--working-dir=<dir>",
-        "arguments": "--working-dir=<dir>",
-        "description": "Sets the working dir use for the git command."
-      },
       {
         "argument": "--force",
         "arguments": "-f, --force",

@@ -6,7 +6,7 @@ package revparse
 import (
 	"fmt"
 
-	"github.com/ldez/go-git-cmd-wrapper/v2/types"
+	"github.com/1800alex/go-git-cmd-wrapper/v2/types"
 )
 
 // AbbrevRef A non-ambiguous short name of the objects name.

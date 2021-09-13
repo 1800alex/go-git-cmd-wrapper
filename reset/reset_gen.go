@@ -6,7 +6,7 @@ package reset
 import (
 	"fmt"
 
-	"github.com/ldez/go-git-cmd-wrapper/v2/types"
+	"github.com/1800alex/go-git-cmd-wrapper/v2/types"
 )
 
 // Hard Resets the index and working tree. Any changes to tracked files in the working tree since <commit> are discarded.

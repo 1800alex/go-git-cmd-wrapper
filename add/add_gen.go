@@ -6,7 +6,7 @@ package add
 import (
 	"fmt"
 
-	"github.com/ldez/go-git-cmd-wrapper/v2/types"
+	"github.com/1800alex/go-git-cmd-wrapper/v2/types"
 )
 
 // All Update the index not only where the working tree has a file matching <pathspec> but also where the index already has an entry.

@@ -3,7 +3,7 @@ package push
 import (
 	"fmt"
 
-	"github.com/ldez/go-git-cmd-wrapper/v2/types"
+	"github.com/1800alex/go-git-cmd-wrapper/v2/types"
 )
 
 // NoFollowTags undocumented push option

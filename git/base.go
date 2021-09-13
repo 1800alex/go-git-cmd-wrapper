@@ -251,5 +251,5 @@ func command(ctx context.Context, name string, options ...types.Option) (string,
 	g := types.NewCmd(name)
 	g.ApplyOptions(options...)
 
-	return g.Exec(ctx, g.Base, g.Debug, g.Options...)
+	return g.Exec(ctx, g.Dir, g.Base, g.Debug, g.Options...)
 }

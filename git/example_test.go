@@ -470,6 +470,6 @@ func ExampleCond() {
 	// git push --all --dry-run --follow-tags --receive-pack=aaa
 }
 
-func cmdExecutorMock(_ context.Context, name string, _ bool, args ...string) (string, error) {
+func cmdExecutorMock(_ context.Context, dir string, name string, _ bool, args ...string) (string, error) {
 	return fmt.Sprintln(name, strings.Join(args, " ")), nil
 }

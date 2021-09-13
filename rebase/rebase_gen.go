@@ -280,3 +280,11 @@ func Whitespace(option string) func(*types.Cmd) {
 		g.AddOptions(fmt.Sprintf("--whitespace=%s", option))
 	}
 }
+
+// WorkingDir Sets the working dir use for the git command.
+// --working-dir=<dir>
+func WorkingDir(dir string) func(*types.Cmd) {
+	return func(g *types.Cmd) {
+		g.AddOptions(fmt.Sprintf("--working-dir=%s", dir))
+	}
+}

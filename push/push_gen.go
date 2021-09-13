@@ -253,3 +253,11 @@ func Verbose(g *types.Cmd) {
 func Verify(g *types.Cmd) {
 	g.AddOptions("--verify")
 }
+
+// WorkingDir Sets the working dir use for the git command.
+// --working-dir=<dir>
+func WorkingDir(dir string) func(*types.Cmd) {
+	return func(g *types.Cmd) {
+		g.AddOptions(fmt.Sprintf("--working-dir=%s", dir))
+	}
+}

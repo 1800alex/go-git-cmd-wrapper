@@ -1,6 +1,6 @@
-.PHONY: generate lint lint-fix test
+.PHONY: generate test
 
-default: generate lint test
+default: generate test
 
 generate:
 	go generate -x internal/generator.go
@@ -10,9 +10,3 @@ clean-generate:
 
 test:
 	go test ./... --cover
-
-lint:
-	golangci-lint run
-
-lint-fix:
-	golangci-lint run --fix

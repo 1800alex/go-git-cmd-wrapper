@@ -17,7 +17,7 @@ type logger interface {
 }
 
 // Executor The Git command call function.
-type Executor func(ctx context.Context, dir string, name string, debug bool, args ...string) (string, error)
+type Executor func(ctx context.Context, name string, debug bool, args ...string) (string, error)
 
 // NewCmd Creates a new Cmd.
 func NewCmd(name string) *Cmd {
@@ -48,10 +48,6 @@ type Option func(g *Cmd)
 
 // AddOptions Add one command option.
 func (g *Cmd) AddOptions(option string) {
-	if strings.HasPrefix(option, "--working-dir=") {
-		g.Dir = strings.TrimPrefix(option, "--working-dir=")
-	}
-
 	g.Options = append(g.Options, option)
 }
 
@@ -63,19 +59,23 @@ func (g *Cmd) ApplyOptions(options ...Option) {
 }
 
 // Exec Execute the Git command call.
-func (g *Cmd) Exec(ctx context.Context, dir string, name string, debug bool, args ...string) (string, error) {
-	return g.Executor(ctx, dir, name, debug, args...)
+func (g *Cmd) Exec(ctx context.Context, name string, debug bool, args ...string) (string, error) {
+	return g.Executor(ctx, name, debug, args...)
 }
 
 func defaultExecutor(g *Cmd) Executor {
-	return func(ctx context.Context, dir string, name string, debug bool, args ...string) (string, error) {
+	return func(ctx context.Context, name string, debug bool, args ...string) (string, error) {
 		if debug {
-			g.Logger.Println(name, strings.Join(args, " "))
+			if g.Dir != "" {
+				g.Logger.Println("cd", g.Dir, "&&", name, strings.Join(args, " "))
+			} else {
+				g.Logger.Println(name, strings.Join(args, " "))
+			}
 		}
 
 		cmd := exec.CommandContext(ctx, name, args...)
-		if dir != "" {
-			cmd.Dir = dir
+		if g.Dir != "" {
+			cmd.Dir = g.Dir
 		}
 
 		output, err := cmd.CombinedOutput()

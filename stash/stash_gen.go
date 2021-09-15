@@ -1,4 +1,4 @@
-package notes
+package stash
 
 // CODE GENERATED AUTOMATICALLY
 // THIS FILE MUST NOT BE EDITED BY HAND

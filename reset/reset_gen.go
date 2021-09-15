@@ -3,11 +3,7 @@ package reset
 // CODE GENERATED AUTOMATICALLY
 // THIS FILE MUST NOT BE EDITED BY HAND
 
-import (
-	"fmt"
-
-	"github.com/1800alex/go-git-cmd-wrapper/v2/types"
-)
+import "github.com/1800alex/go-git-cmd-wrapper/v2/types"
 
 // Hard Resets the index and working tree. Any changes to tracked files in the working tree since <commit> are discarded.
 // --hard
@@ -48,12 +44,4 @@ func Quiet(g *types.Cmd) {
 // --soft
 func Soft(g *types.Cmd) {
 	g.AddOptions("--soft")
-}
-
-// WorkingDir Sets the working dir use for the git command.
-// --working-dir=<dir>
-func WorkingDir(dir string) func(*types.Cmd) {
-	return func(g *types.Cmd) {
-		g.AddOptions(fmt.Sprintf("--working-dir=%s", dir))
-	}
 }
